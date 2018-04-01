@@ -9,6 +9,8 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = Artist.new
+    @song = Song.new(artist_id: params[:artist_id])
+    # @post = Post.new(author_id: params[:author_id])
   end
 
   def create
